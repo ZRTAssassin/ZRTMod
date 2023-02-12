@@ -45,7 +45,7 @@ namespace ZRTMod.Projectiles
         // Custom AI
         public override void AI()
         {
-            float maxDetectRadius = 800f; // The maximum radius at which a projectile can detect a target
+            float maxDetectRadius = 600f; // The maximum radius at which a projectile can detect a target
             float projSpeed = 20f; // The speed at which the projectile moves towards the target
 
             // Trying to find NPC closest to the projectile

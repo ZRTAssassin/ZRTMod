@@ -59,7 +59,7 @@ namespace ZRTMod.Items.Weapons
                 ceilingLimit = player.Center.Y - 200f;
             }
             // Loop these functions 3 times.
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 6; i++)
             {
                 position = player.Center - new Vector2(Main.rand.NextFloat(401) * player.direction, 600f);
                 position.Y -= 100 * i;
