@@ -6,7 +6,7 @@ using ZRTMod.Projectiles;
 
 namespace ZRTMod.Items.Weapons
 {
-    public class ZRTPrism : ModItem
+    public class ZRTImperfectPrism : ModItem
     {
         // You can use a vanilla texture for your item by using the format: "Terraria/Item_<Item ID>".
         /*public override string Texture => "Terraria/Item_" + ItemID.LastPrism;*/
@@ -14,8 +14,8 @@ namespace ZRTMod.Items.Weapons
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("ZRTPrism");
-            Tooltip.SetDefault("Don't do this. It's weaker than the normal last prism. Seriously.");
+            DisplayName.SetDefault("Imperfect Last Prism");
+            Tooltip.SetDefault("A slightly different laser-firing Prism Ignores NPC immunity frames and fires 10 beams at once instead of 6.");
         }
 
         public override void SetDefaults()
@@ -27,7 +27,7 @@ namespace ZRTMod.Items.Weapons
             Item.mana = 6;
             Item.damage = 10;
             // try by shooting the default last prism beams
-            // Item.shoot = ModContent.ProjectileType<ZRTPrismHoldout>();
+            // Item.shoot = ModContent.ProjectileType<ZRTImperfectPrismHoldout>();
             Item.shootSpeed = 30f;
 
             // Change the item's draw color so that it is visually distinct from the vanilla Last Prism.
@@ -47,7 +47,6 @@ namespace ZRTMod.Items.Weapons
                 .AddIngredient(ItemID.AmberStaff)
                 .AddIngredient(ItemID.DiamondStaff)
                 .AddIngredient(ItemID.BlackLens, 10)
-                .AddIngredient(ItemID.LastPrism)
                 .AddTile(TileID.MythrilAnvil)
                 .Register();
         }

@@ -31,7 +31,7 @@ namespace ZRTMod.Items.Weapons
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ItemID.DirtBlock, 10);
+			recipe.AddIngredient(ItemID.BrokenHeroSword, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.Register();
 		}

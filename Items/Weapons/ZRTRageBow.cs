@@ -25,12 +25,13 @@ namespace ZRTMod.Items.Weapons
 
         public override void SetDefaults()
         {
+            Item.CloneDefaults(ItemID.DaedalusStormbow);
             Item.width = 26;
             Item.height = 42;
 
             Item.useStyle = ItemUseStyleID.Shoot;
-            Item.useTime = 20;
-            Item.useAnimation = 20;
+            Item.useTime = 15;
+            Item.useAnimation = 15;
             Item.autoReuse = true;
 
             Item.DamageType = DamageClass.Ranged;
@@ -88,7 +89,8 @@ namespace ZRTMod.Items.Weapons
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.DirtBlock, 1)
+                .AddIngredient(ItemID.DaedalusStormbow, 1)
+                .AddIngredient(ItemID.ChlorophyteBar, 10)
                 .AddTile(TileID.WorkBenches)
                 .Register();
         }
