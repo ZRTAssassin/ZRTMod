@@ -13,11 +13,11 @@ namespace ZRTMod.Items.Weapons
     ///     See Source code for Star Wrath projectile to see how it passes through tiles.
     ///     For a detailed sword guide see <see cref="ExampleSword" />
     /// </summary>
-    public class ZRTRageBow : ModItem
+    public class ZRTWrathBow : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Daedelus Rage Bow");
+            DisplayName.SetDefault("Daedalus wrath bow.");
             Tooltip.SetDefault("Daedalus watched the death of his son and channeled the grief into a weapon.");
 
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -30,14 +30,14 @@ namespace ZRTMod.Items.Weapons
             Item.height = 42;
 
             Item.useStyle = ItemUseStyleID.Shoot;
-            Item.useTime = 15;
-            Item.useAnimation = 15;
+            Item.useTime = 10;
+            Item.useAnimation = 10;
             Item.autoReuse = true;
 
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 50;
-            Item.knockBack = 6;
-            Item.crit = 6;
+            Item.damage = 75;
+            Item.knockBack = 0;
+            Item.crit = 12;
 
             Item.value = Item.buyPrice(gold: 5);
             Item.rare = ItemRarityID.Pink;
@@ -60,7 +60,7 @@ namespace ZRTMod.Items.Weapons
                 ceilingLimit = player.Center.Y - 200f;
             }
             // Loop these functions 3 times.
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 10; i++)
             {
                 position = player.Center - new Vector2(Main.rand.NextFloat(401) * player.direction, 600f);
                 position.Y -= 100 * i;
@@ -78,7 +78,7 @@ namespace ZRTMod.Items.Weapons
 
                 heading.Normalize();
                 heading *= velocity.Length();
-                heading.Y += Main.rand.Next(-40, 41) * 0.02f;
+                //heading.Y += Main.rand.Next(-40, 41) * 0.02f;
                 Projectile.NewProjectile(source, position, heading, type, damage * 2, knockback, player.whoAmI, 0f, ceilingLimit);
             }
 
@@ -89,9 +89,9 @@ namespace ZRTMod.Items.Weapons
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.DaedalusStormbow, 1)
-                .AddIngredient(ItemID.ChlorophyteBar, 10)
-                .AddTile(TileID.WorkBenches)
+                .AddIngredient<ZRTRageBow>()
+                .AddIngredient(ItemID.LunarBar, 10)
+                .AddTile(TileID.LunarCraftingStation)
                 .Register();
         }
     }

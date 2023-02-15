@@ -31,8 +31,8 @@ namespace ZRTMod.Items.Weapons
             // going to copy the stats of an item, use CloneDefaults().
 
             Item.CloneDefaults(ItemID.SuperStarCannon);
-            Item.useTime = (int)(Item.useTime * 0.75f);
-            Item.useAnimation = Item.useTime;
+            Item.useTime = 7;
+            Item.useAnimation = 7;
 
             // After CloneDefaults has been called, we can now modify the stats to our wishes, or keep them as they are.
             // For the sake of example, let's swap the vanilla Meowmere projectile shot from our item for our own projectile by changing Item.shoot:
@@ -46,7 +46,7 @@ namespace ZRTMod.Items.Weapons
             Item.noMelee = true;
 
             Item.damage = (int)(Item.damage * 1.5); // Makes this weapon's damage double the super star cannon's damage.
-            Item.shootSpeed *= 2.0f; // Makes this weapon's projectiles shoot 25% faster than the super star cannon's projectiles.
+            Item.shootSpeed *= 5.0f; // Makes this weapon's projectiles shoot 25% faster than the super star cannon's projectiles.
         }
 
 

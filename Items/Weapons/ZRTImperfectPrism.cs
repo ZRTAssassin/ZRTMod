@@ -25,7 +25,7 @@ namespace ZRTMod.Items.Weapons
 
             Item.CloneDefaults(ItemID.LastPrism);
             Item.mana = 6;
-            Item.damage = 10;
+            Item.damage = 15;
             // try by shooting the default last prism beams
             // Item.shoot = ModContent.ProjectileType<ZRTImperfectPrismHoldout>();
             Item.shootSpeed = 30f;
