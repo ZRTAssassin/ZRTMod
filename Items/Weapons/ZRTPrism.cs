@@ -24,8 +24,8 @@ namespace ZRTMod.Items.Weapons
             // For example, this copies sprite size, use style, sell price, and the item being a magic weapon.
 
             Item.CloneDefaults(ItemID.LastPrism);
-            Item.mana = 6;
-            Item.damage = 10;
+            Item.mana = 1;
+            Item.damage = 150;
             // try by shooting the default last prism beams
             // Item.shoot = ModContent.ProjectileType<ZRTPrismHoldout>();
             Item.shootSpeed = 30f;
@@ -38,16 +38,7 @@ namespace ZRTMod.Items.Weapons
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.HallowedBar, 10)
-                .AddIngredient(ItemID.AmethystStaff)
-                .AddIngredient(ItemID.TopazStaff)
-                .AddIngredient(ItemID.SapphireStaff)
-                .AddIngredient(ItemID.EmeraldStaff)
-                .AddIngredient(ItemID.RubyStaff)
-                .AddIngredient(ItemID.AmberStaff)
-                .AddIngredient(ItemID.DiamondStaff)
-                .AddIngredient(ItemID.BlackLens, 10)
-                .AddIngredient(ItemID.LastPrism)
+                .AddIngredient(ItemID.Acorn)
                 .AddTile(TileID.MythrilAnvil)
                 .Register();
         }

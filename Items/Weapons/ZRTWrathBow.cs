@@ -17,7 +17,7 @@ namespace ZRTMod.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Daedalus wrath bow.");
+            DisplayName.SetDefault("Daedalus Wrath Bow");
             Tooltip.SetDefault("Daedalus watched the death of his son and channeled the grief into a weapon.");
 
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
